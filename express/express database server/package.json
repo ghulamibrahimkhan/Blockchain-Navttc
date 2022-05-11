@@ -1,0 +1,15 @@
+{
+  "name": "express-database-server",
+  "version": "1.0.0",
+  "description": "task \"create user,get user from id,deete user update user filter users by name\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "G_ibrahim_K",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

@@ -1,0 +1,4 @@
+** path module
+const path= require('path')
+res.sendfile(path.join(__dirname,example.html))
+npm init 

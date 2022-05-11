@@ -236,17 +236,55 @@
 // }
 // sum(c=3,b=2,a=1) // There are no keyword argumenta in javascript
 
-Switch
-id = 110
-switch (id) {
-    case 100:
-        console.log("abc");
-        break;
-    case 110:
-        console.log("GG");
-        break;
+// Switch
+// id = 110
+// switch (id) {
+//     case 100:
+//         console.log("abc");
+//         break;
+//     case 110:
+//         console.log("GG");
+//         break;
 
-    default:
-        console.log("xyz");
-        break;
-}
+//     default:
+//         console.log("xyz");
+//         break;
+// }
+
+// While
+// x = 10
+// while(x > 0){
+//     console.log(x);
+//     x--
+// }
+// console.log(x);
+
+
+// word = "civic"
+// plnd_check = ""
+// z = 0
+// while(z < word.length){
+//     plnd_check += word[z]
+//     z++
+// }
+// switch (word) {
+//     case plnd_check:
+//         console.log("The word is Palindrome");
+//         break;
+
+//     default:
+//         console.log("F");
+//         break;
+// }
+
+
+// function add(x,y){
+//     z = x+y
+//     console.log(z);
+// }
+
+// js arrow function
+
+var arroFun = (a,b) => a + b
+
+console.log(arroFun(2,2));
