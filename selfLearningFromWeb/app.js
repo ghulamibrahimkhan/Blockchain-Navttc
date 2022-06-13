@@ -285,6 +285,56 @@
 
 // js arrow function
 
-var arroFun = (a,b) => a + b
+// var arroFun = (a,b) => a + b
 
-console.log(arroFun(2,2));
+// console.log(arroFun(2,2));
+
+// x = 1
+// y = 2
+// sign = "-"
+
+// if(sign == '-' & x !== Nan & y !== NaN){
+//     console.log(x-y);
+// }
+
+// ****************************************
+//             Class 15
+// ***************************************
+
+// while loop is faster than for loop
+// var i = 0
+// while (i<10) {
+//     console.log(i);
+//     i++
+// }
+
+// j = 10
+// do {
+//     console.log(j);
+//     j++
+// } while (j<10);
+
+// rest of the class 15 on eventFunctions.js
+
+
+/// Skipping some classes, gona take them later
+
+
+//***** Class 19.1 **********
+
+// objects
+
+// var obj = {
+//     name : 'ibrahim',
+//     class1: 3,
+//     id : 201
+// }
+// var check = 'name' in obj
+// console.log(check);
+
+// construction function
+function employee(id,age,name){
+    this.id = id
+    this.age = age
+    this.name = name
+}
