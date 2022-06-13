@@ -1,0 +1,108 @@
++_+_+_M_+O_+R_+B_+I_+U_+S_+7_+7_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
+        ----------------------------------------------------
+""""""""""""""""""""""" MongoDB Cheet Sheet """""""""""""""""""""""
+        ----------------------------------------------------
+_+_+_+_+_+_+_+_+_++_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
+
+@*********************____Database Commands____****************
+
+1- show dbs          |(view all databse)
+2- use db_name       |(Create a new db and switch databases)
+3- db                |(View current Database)
+4- db.dropDatabase() |(Delete Database)
+
+
+
+@******************____Collection commands____******************
+
+1 - show collections              |(show collections)
+2 - db.createCollection('xyz')    |create a collections named xyz
+
+            ***Delete Collection***
+3 - db.xyz.drop()                 |Delete a collection named xyz
+
+
+
+********************____Row(Document) Commands____******************
+
+            ***Find***
+1 - db.xyz.find()                 |Shows all rows(document) in the xyz collection
+2 - db.xyz.find({name:'Ibrahim'}) |Shows those rows(document) in the xyz collection which have the name, Ibrahim
+3 - db.xyz.find().pretty()        |Shows all rows(document) in collection in a nice looking way
+4 - db.xyz.findOne()              |Shows the 1st row
+
+
+            ***Limit***
+5 - db.xyz.find().limit(2)                  |Returns just 2 initial rows(document) in the xyz collection even. Ignore the rest rows
+6 - db.xyz.find({name:'Ibrahim'}).limit(3)  |Returns just 3 rows(document) in the xyz collection which has the name, Ibrahim 
+
+
+            ***Insert***
+7 - db.xyz.insert({'name':'Ali','id':22'})                     |Insert one row
+8 - db.xyz.insertMany([{name:'Ali',id:22},{name:'Zoe',id:23}]) |Insert many rows as you want
+            
+
+            ***Count***
+9 - db.xyz.count()                         |Returns the number of rows
+10 - db.xyz.find({name:'Ibrahim'}).count()  |Returns the number of rows which have the name, Ibrahim
+
+
+            ***Sort**
+11 - db.xyz.find().sort({roll_no:1})        | Ascending order sorting
+12 - db.xyz.find().sort({roll_no:-1})       | Descending order sorting(-1)
+
+
+            ***Update***
+13 - db.xyz.update({name:'Imran'},{name:'Shabaz'})                | update the object if name:'Imran' exists in collection
+14 - db.xyz.update({name:'Imran'},{name:'Shabaz'},{upsert:true})  | Update if exists otherwise append 
+   - db.xyz.updateOne({name:'Imran'},{$set:{name:'Nawaz'}})       | Update the existing value else append
+
+
+            ***Increament***
+15 - db.xyz.update({name:'Wahab'},{$inc:{age:2}})                  | Increase the value by adding i.e age = 20 + 2
+
+
+            ***Rename***
+16 - db.xyz.update({name:'Wahab'},{$rename:{name:'first_name'}})   | Renames the key (not the value)
+
+
+            ***Remove***
+17 - db.xyz.remove({name:'Wahab'})       | Deletes the whole row
+18 - db.xyz.remove({})                   | Deletes all rows bt not the collection itself
+19 - db.xyz.findOneAndDelete({class:'6}) | Delets that 1 row  
+
+
+            ***Less than***
+20 - db.xyz.find({age:{$lt:20}})         | i.e.,Returns those rows where age is less than 20(the given number)
+
+
+            ***Greater than***
+21 - db.xyz.find({age:{$gt:20}})         | i.e.,Returns those rows where age is greater than 20(the given number)
+
+  Note:For >= and <= we'll use  $gte(greater and ==) and $lte(less and ==)  
+
+
+************************ Important Links *******************
+1- Here you can explore other update operators
+https://www.mongodb.com/docs/manual/reference/operator/update/
+
+2- MongoDB cheet sheet on mongodb's website
+https://www.mongodb.com/developer/quickstart/cheat-sheet/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>7ibrahimKhan<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+@@@@@@@@@@@@@@@@@@@Morbius77@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
