@@ -1,9 +1,16 @@
 const {readFileSync,writeFileSync} = require('fs')
+const path = require('path')
 
-// const path = './content'
-const first = readFileSync('./content/first.txt','utf8')
-const text = readFileSync('./content/subfolder/text.txt')
+const firstPath = './content/first.txt'
+const secondPath = './content/subfolder/text.txt'
+const writePath = './content/result-sync.txt'
+
+
+const first = readFileSync(firstPath,'utf8')
+const text = readFileSync(secondPath,'utf8')
 
 writeFileSync(
-    './content/result-sync.txt',`Here is the result ${first} , ${text} \n`,{flag:'a'}
+    writePath,`Here is the result ${first} , ${text} \n`,{flag:'a' }
 )
+
+// {flag:'a' } append the data to file otherwise rewrite happen
